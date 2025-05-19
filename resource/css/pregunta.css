@@ -1,0 +1,328 @@
+:root {
+    --color-primary: #4a6fa5;
+    --color-secondary: #166088;
+    --color-light: #f8f9fa;
+    --color-dark: #212529;
+    --color-gray: #6c757d;
+    --border-radius: 8px;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav main";
+    grid-template-rows: 70px calc(100vh - 70px);
+    grid-template-columns: 220px 1fr;
+    background-color: #f5f5f5;
+}
+
+header {
+    grid-area: header;
+    background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    box-shadow: var(--shadow-md);
+    color: white;
+}
+
+header a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+header a img {
+    height: 30px;
+}
+
+.buscador {
+    position: relative;
+    width: 40%;
+    max-width: 500px;
+}
+
+.buscador input {
+    width: 100%;
+    padding: 8px 15px 8px 35px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 0.95rem;
+}
+
+.buscador img {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 18px;
+    opacity: 0.6;
+}
+
+.logings {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logings p {
+    font-weight: 500;
+}
+
+.logings a {
+    color: white;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.logings a:first-child {
+    background: rgba(255,255,255,0.1);
+}
+
+.logings a:last-child {
+    background: white;
+    color: var(--color-primary);
+}
+
+.logings a:hover {
+    opacity: 0.9;
+}
+
+.logings button {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.logings button:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+nav {
+    grid-area: nav;
+    background-color: white;
+    padding: 20px 0;
+    border-right: 1px solid #e0e0e0;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 25px;
+    color: var(--color-dark);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+nav a:hover {
+    background-color: #f0f0f0;
+    color: var(--color-primary);
+}
+
+nav a img {
+    height: 20px;
+    opacity: 0.7;
+}
+
+main {
+    grid-area: main;
+    padding: 25px;
+    overflow-y: auto;
+    background-color: white;
+}
+.main_pregunta > section:first-child {
+    background-color: var(--color-light);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 20px;
+}
+
+.main_pregunta h1 {
+    color: var(--color-primary);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.main_pregunta p {
+    color: var(--color-dark);
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.main_pregunta span {
+    display: inline-block;
+    background-color: var(--color-gray);
+    color: white;
+    padding: 4px 8px;
+    border-radius: var(--border-radius);
+    font-size: 0.85rem;
+    margin-right: 8px;
+    margin-bottom: 10px;
+}
+
+form textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+form button {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: var(--color-secondary);
+}
+
+.comentarios {
+    margin-top: 20px;
+}
+
+.comentarios > div {
+    border-top: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.comentarios span {
+    font-weight: bold;
+    color: var(--color-light);
+}
+
+.comentarios p {
+    margin: 5px 0;
+}
+
+.comentarios form {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.comentarios form button {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    padding: 4px 8px;
+    border-radius: var(--border-radius);
+    font-size: 0.85rem;
+}
+
+.comentarios form button:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.comentarios button {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    padding: 4px 8px;
+    border-radius: var(--border-radius);
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.comentarios button:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+dialog {
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: var(--shadow-md);
+    background-color: var(--color-light);
+    font-family: inherit;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+dialog h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+dialog textarea {
+    width: 100%;
+    height: 120px;
+    resize: vertical;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    font-family: inherit;
+}
+
+dialog button[type="submit"],
+dialog button[type="button"] {
+    padding: 8px 16px;
+    margin-right: 10px;
+    font-size: 0.95rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    background-color: var(--color-primary);
+    color: white;
+    transition: background-color 0.2s;
+}
+
+dialog button[type="button"] {
+    background-color: #ccc;
+    color: #333;
+}
+
+dialog button[type="submit"]:hover {
+    background-color: var(--color-primary-dark);
+}
+
+dialog button[type="button"]:hover {
+    background-color: #bbb;
+}
+
+
+
