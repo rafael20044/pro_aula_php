@@ -11,7 +11,7 @@ if (isset($_SESSION['usuario'])) {
     $usuario = $_SESSION['usuario'];
 }
 $etiquetas = VerEtiquetas::verEtiquetas();
-$prefuntasInfo = BuscarPreguntasCtr::buscarPreguntasCtr();
+$prefuntasInfo = $_SESSION['preguntasBuscar'];
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +23,7 @@ $prefuntasInfo = BuscarPreguntasCtr::buscarPreguntasCtr();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Questopia - Red Social Educativa</title>
-    <link rel="stylesheet" href="../resource/css/preguntas.css">
+    <link rel="stylesheet" href="../resource/css/buscador.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
@@ -72,8 +72,7 @@ $prefuntasInfo = BuscarPreguntasCtr::buscarPreguntasCtr();
 
     <main class="main_principal">
         <section class="main-content">
-            <h1>Bienvenido a Questopia</h1>
-            <p>Explora preguntas y comparte tus conocimientos con la comunidad educativa.</p>
+            <h1>Resultado de la busqueda</h1>
 
             <?php if ($usuario): ?>
                 <div style="margin-top: 30px;">
@@ -116,6 +115,9 @@ $prefuntasInfo = BuscarPreguntasCtr::buscarPreguntasCtr();
             <?php endif; ?>
         </section>
         <section class="main-preguntas">
+            <?php if(empty($prefuntasInfo)): ?>
+                <p>Sin resultados :/</p>
+            <?php endif; ?>
             <?php foreach ($prefuntasInfo as $prefuntaInfo): ?>
                 <article>
                     <a href="pregunta.php?id=<?= $prefuntaInfo->getIdPublicacion() ?>">

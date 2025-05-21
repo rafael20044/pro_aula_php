@@ -55,24 +55,41 @@ header a img {
     position: relative;
     width: 40%;
     max-width: 500px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .buscador input {
-    width: 100%;
+    flex: 1;
     padding: 8px 15px 8px 35px;
-    border: none;
+    border: 1px solid #ccc;
     border-radius: var(--border-radius);
     font-size: 0.95rem;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
-.buscador img {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+.buscador button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buscador button img {
     height: 18px;
     opacity: 0.6;
+    transition: opacity 0.2s ease;
 }
+
+.buscador button:hover img {
+    opacity: 1;
+}
+
 
 .logings {
     display: flex;

@@ -30,7 +30,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -47,26 +47,45 @@ header {
     height: 30px;
 }
 
-.search-bar {
-    display: flex;
-    align-items: center;
-    background: white;
-    border-radius: var(--border-radius);
-    padding: 5px 10px;
+.buscador {
+    position: relative;
     width: 40%;
     max-width: 500px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
-.search-bar input {
+.buscador input {
+    flex: 1;
+    padding: 8px 15px 8px 35px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 0.95rem;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.buscador button {
+    background: none;
     border: none;
-    outline: none;
-    width: 100%;
+    cursor: pointer;
     padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.search-bar i {
-    color: #666;
+.buscador button img {
+    height: 18px;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
 }
+
+.buscador button:hover img {
+    opacity: 1;
+}
+
 
 .user-actions {
     display: flex;
@@ -74,14 +93,15 @@ header {
     gap: 15px;
 }
 
-.user-actions a, .user-actions button {
+.user-actions a,
+.user-actions button {
     color: white;
     text-decoration: none;
     font-weight: 500;
 }
 
 .user-actions button {
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
     border: none;
     padding: 5px 10px;
     border-radius: var(--border-radius);
@@ -91,7 +111,7 @@ header {
 .user-actions a.login {
     padding: 5px 15px;
     border-radius: var(--border-radius);
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .user-actions a.signup {
@@ -137,8 +157,10 @@ main {
     background: white;
     padding: 20px;
     border-radius: var(--border-radius);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    text-align: center;
+    /* centra el contenido */
 }
 
 .profile-header h1 {
@@ -149,7 +171,42 @@ main {
 .profile-header span {
     color: #666;
     font-size: 0.9rem;
+    display: block;
+    margin-bottom: 15px;
 }
+
+/* Botones dentro del perfil */
+.profile-header button,
+.profile-header form button {
+    margin: 5px;
+    padding: 10px 18px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Botón de editar */
+.profile-header .btn-editar {
+    background-color: #3498db;
+    color: white;
+}
+
+.profile-header .btn-editar:hover {
+    background-color: #2980b9;
+}
+
+/* Botón de eliminar */
+.profile-header .btn-eliminar {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.profile-header .btn-eliminar:hover {
+    background-color: #c0392b;
+}
+
 
 .questions-section h2 {
     margin-bottom: 15px;
@@ -163,7 +220,7 @@ main {
     border-radius: var(--border-radius);
     padding: 15px;
     margin-bottom: 15px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .question-card h3 {
@@ -197,7 +254,7 @@ main {
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -209,7 +266,7 @@ dialog {
     padding: 20px;
     width: 90%;
     max-width: 500px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 dialog h2 {
@@ -223,7 +280,8 @@ dialog label {
     font-weight: 500;
 }
 
-dialog input, dialog textarea {
+dialog input,
+dialog textarea {
     width: 100%;
     padding: 8px 10px;
     margin-bottom: 15px;
@@ -265,27 +323,27 @@ dialog textarea {
     color: #666;
 }
 
-.questions-section > article {
+.questions-section>article {
     background: white;
     border-radius: var(--border-radius);
     padding: 15px;
     margin-bottom: 15px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.questions-section > article a {
+.questions-section>article a {
     color: var(--color-dark);
     text-decoration: none;
     display: block;
     margin-bottom: 10px;
 }
 
-.questions-section > article p {
+.questions-section>article p {
     margin: 5px 0;
     color: #333;
 }
 
-.questions-section > article span {
+.questions-section>article span {
     display: inline-block;
     margin-right: 10px;
     font-size: 0.85rem;
@@ -320,4 +378,73 @@ dialog textarea {
 
 .questions-section .editar-btn:hover {
     background: #e0a800;
+}
+
+.dialogoPregunta {
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 25px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dialogoPregunta h2 {
+    margin-bottom: 20px;
+    color: var(--color-primary);
+}
+
+.dialogoPregunta label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+.dialogoPregunta input,
+dialog textarea {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+.dialogoPregunta textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.dialogo-botones {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.dialogo-botones button {
+    padding: 8px 20px;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.dialogo-botones button[type="submit"] {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+}
+
+.dialogo-botones button[type="submit"]:hover {
+    background-color: var(--color-secondary);
+}
+
+.dialogo-botones button[type="button"] {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+}
+
+.dialogo-botones button[type="button"]:hover {
+    background-color: #e0e0e0;
 }

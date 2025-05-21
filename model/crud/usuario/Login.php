@@ -10,7 +10,7 @@ class Login
     {
         $conexionPDO = new Conexion();
         $conexion = $conexionPDO->getConexion();
-        $query = 'SELECT * FROM usuarios WHERE email = :email';
+        $query = "SELECT * FROM usuarios WHERE email = :email AND estado = 'activo' ";
         $stmt = $conexion->prepare($query);
         $stmt->execute([':email' => trim($email)]);
         $resultado = $stmt->fetch(PDO::FETCH_ASSOC);

@@ -26,12 +26,15 @@ if (isset($_SESSION['usuario'])) {
             <img src="../resource/img/favicon.ico" alt="Questopia">
             Questopia
         </a>
-        <div class="buscador">
-            <input type="text" placeholder="Buscar pregunta">
-            <img src="../resource/img/lupa.png" alt="Buscar">
-        </div>
+        <form class="buscador" method="get" action="../controller/pregunta/buscarPreguntas.php">
+            <input type="text" name="busqueda" placeholder="Buscar pregunta">
+            <button type="submit">
+                <img src="../resource/img/lupa.png" alt="Buscar">
+            </button>
+        </form>
+
         <div class="logings">
-            <?php if($usuario): ?>
+            <?php if ($usuario): ?>
                 <p>Hola, <?= $usuario->getNombre1() ?></p>
                 <form action="../controller/usuario/salir.php" method="post">
                     <button type="submit" name="cerrar_sesion">
@@ -44,7 +47,7 @@ if (isset($_SESSION['usuario'])) {
             <?php endif; ?>
         </div>
     </header>
-    
+
     <nav>
         <a href="principal.php">
             <img src="../resource/img/casa.png" alt="Inicio">
@@ -59,19 +62,19 @@ if (isset($_SESSION['usuario'])) {
             Nosotros
         </a>
     </nav>
-    
+
     <main>
         <div class="about-container">
             <div class="about-logo">
                 <img src="../resource/img/favicon.ico" alt="Questopia">
             </div>
-            
+
             <p class="about-mission">
                 IMPULSAMOS EL CONOCIMIENTO COLABORATIVO PARA CREAR TECNOLOGÍA QUE TRANSFORME EL MUNDO.
             </p>
-            
+
             <h3 class="partners-title">Nuestros colaboradores</h3>
-            
+
             <div class="partners-grid">
                 <div class="partner-item">
                     <img src="../resource/img/bxl-angular 1.png" alt="Angular">
@@ -107,4 +110,5 @@ if (isset($_SESSION['usuario'])) {
         });
     </script>
 </body>
+
 </html>

@@ -55,41 +55,24 @@ header a img {
     position: relative;
     width: 40%;
     max-width: 500px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
 }
 
 .buscador input {
-    flex: 1;
+    width: 100%;
     padding: 8px 15px 8px 35px;
-    border: 1px solid #ccc;
+    border: none;
     border-radius: var(--border-radius);
     font-size: 0.95rem;
-    background-color: #fff;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
-.buscador button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.buscador button img {
+.buscador img {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     height: 18px;
     opacity: 0.6;
-    transition: opacity 0.2s ease;
 }
-
-.buscador button:hover img {
-    opacity: 1;
-}
-
 
 .logings {
     display: flex;
@@ -171,110 +154,8 @@ main {
     padding: 25px;
     overflow-y: auto;
     background-color: white;
-}
-
-.about-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 30px 0;
-}
-
-.about-logo {
-    margin-bottom: 30px;
-}
-
-.about-logo img {
-    width: 120px;
-    height: 120px;
-}
-
-.about-mission {
-    font-size: 1.2rem;
-    color: var(--color-primary);
-    font-weight: 500;
-    margin-bottom: 40px;
-    line-height: 1.6;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.partners-title {
-    color: var(--color-gray);
-    margin-bottom: 30px;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.partners-grid {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.partner-item {
-    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 120px;
-    height: 80px;
-    padding: 15px;
-    background: white;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-sm);
-    transition: all 0.3s;
-}
-
-.partner-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
-}
-
-.partner-item img {
-    max-width: 100%;
-    max-height: 100%;
-    filter: grayscale(100%);
-    opacity: 0.7;
-    transition: all 0.3s;
-}
-
-.partner-item:hover img {
-    filter: grayscale(0%);
-    opacity: 1;
-}
-
-@media (max-width: 768px) {
-    body {
-        grid-template-areas:
-            "header"
-            "main";
-        grid-template-rows: 70px 1fr;
-        grid-template-columns: 1fr;
-    }
-    
-    nav {
-        display: none;
-    }
-    
-    .buscador {
-        width: 60%;
-    }
-    
-    .about-mission {
-        font-size: 1rem;
-        padding: 0 15px;
-    }
-    
-    .partners-grid {
-        gap: 15px;
-    }
-    
-    .partner-item {
-        width: 100px;
-        height: 70px;
-    }
 }
