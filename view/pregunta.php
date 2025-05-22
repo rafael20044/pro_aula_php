@@ -128,6 +128,7 @@ if (!$preguntaInfo->getContenido()) {
                             <?php if ($usuario && $respuesta->getUsuarioId() == $usuario->getId()): ?>
                                 <form action="../controller/respuesta/eliminarRespuesta.php" method="post">
                                     <input type="hidden" name="respuesta_id" value="<?= $respuesta->getId() ?>">
+                                    <input type="hidden" name="pregunta_id" value="<?= $id ?>">
                                     <button type="submit">Eliminar</button>
                                 </form>
                                 <button onclick="abrirDialogEditar(<?= $respuesta->getId() ?>, '<?= htmlspecialchars($respuesta->getContenido(), ENT_QUOTES) ?>')">

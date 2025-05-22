@@ -3,7 +3,7 @@ require_once __DIR__ . '../../../model/crud/pregunta/BuscarPreguntaCRUD.php';
 require_once __DIR__ . '../../../model/dto/PreguntaEtiquetaRespuesta.php';
 session_start();
 
-$buscar = trim($_GET['busqueda']);
+$buscar = '%' . trim($_GET['busqueda']) . '%';
 
 $preguntasBuscar = BuscarPreguntaCRUD::buscar($buscar);
 $_SESSION['preguntasBuscar'] = $preguntasBuscar;
