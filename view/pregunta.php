@@ -88,7 +88,7 @@ if (!$preguntaInfo->getContenido()) {
             <?php if ($usuario): ?>
                 <form action="../controller/respuesta/crearRespuesta.php" method="post">
                     <h2>Coloca una respuesta para ayudar a resolver la pregunta</h2>
-                    <textarea name="contenido" id=""></textarea>
+                    <textarea name="contenido" id="" required></textarea>
                     <input type="hidden" name="usuario_id" value="<?= $usuario->getId() ?>">
                     <input type="hidden" name="pregunta_id" value="<?= $id ?>">
                     <button type="submit">Responder</button>
@@ -127,6 +127,7 @@ if (!$preguntaInfo->getContenido()) {
 
                             <?php if ($usuario && $respuesta->getUsuarioId() == $usuario->getId()): ?>
                                 <form action="../controller/respuesta/eliminarRespuesta.php" method="post">
+                                    <input type="hidden" name="respuesta_id" value="<?= $respuesta->getId() ?>">
                                     <button type="submit">Eliminar</button>
                                 </form>
                                 <button onclick="abrirDialogEditar(<?= $respuesta->getId() ?>, '<?= htmlspecialchars($respuesta->getContenido(), ENT_QUOTES) ?>')">
