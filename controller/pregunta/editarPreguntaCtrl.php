@@ -19,3 +19,5 @@ if ($seEdito) {
     $_SESSION['error'] = 'No se puedo editar la pregunta';
     header('location: ../../view/principal.php');
 }
+
+//edita las preguntas 

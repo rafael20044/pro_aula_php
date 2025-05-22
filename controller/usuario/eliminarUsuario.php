@@ -15,3 +15,5 @@ if ($seBorro) {
 
 header('location: ../../view/principal.php');
 exit;
+
+//eliminamos perfil del usuario 

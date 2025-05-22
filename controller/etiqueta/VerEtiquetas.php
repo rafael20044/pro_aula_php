@@ -7,3 +7,4 @@ class VerEtiquetas
         return VerEtiqueta::verEtiquetas();
     }
 }
+//muestra las etiquetas en la base de datos 

@@ -10,3 +10,5 @@ $_SESSION['preguntasBuscar'] = $preguntasBuscar;
 
 header('location: ../../view/buscador.php');
 exit;
+
+//esta busca una pregunta por el titulo o contenido

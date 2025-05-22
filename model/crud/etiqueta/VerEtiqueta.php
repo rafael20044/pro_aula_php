@@ -20,3 +20,5 @@ class VerEtiqueta
         return $etiquetas;
     }
 }
+
+// aqui se observa la etiqueta de una pregunta 

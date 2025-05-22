@@ -7,3 +7,4 @@ class BuscarPreguntasCtr
         return BuscarPreguntas::buscar();
     }
 }
+//busca todas las preguntas 

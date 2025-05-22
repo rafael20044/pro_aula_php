@@ -15,3 +15,5 @@ class CrearEtiquetaCRUD
         return BuscarEtiquetaPorNombre::buscar($nombre);
     }
 }
+
+//crea una etiqueta - modelo 

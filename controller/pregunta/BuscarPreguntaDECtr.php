@@ -6,3 +6,4 @@ class BuscarPreguntaDECtr
         return BuscarPreguntaDe::buscarPreguntasDe($id);
     }
 }
+//busca pregunta por el id de nuestro usuario 

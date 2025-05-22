@@ -41,3 +41,5 @@ if ($seEdito) {
 header('location: ../../view/principal.php');
 exit;
 
+
+// aqui se edita el perfil de la persona 

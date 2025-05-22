@@ -38,3 +38,5 @@ class BuscarPreguntaDe
         return $preguntas;
     }
 }
+
+// aqui se buscan o se muestran todas la preguntas que ha hecho un usuario 

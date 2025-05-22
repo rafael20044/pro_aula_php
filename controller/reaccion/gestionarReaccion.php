@@ -15,3 +15,5 @@ if ($seCreo) {
 }else{
     header("Location: ../../view/pregunta.php?id=" . $_POST['pregunta_id']);
 }
+
+//sesion de like y dislike de respuestas 

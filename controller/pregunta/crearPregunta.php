@@ -40,3 +40,5 @@ if ($seCreo) {
 }
 
 header('location: ../../view/preguntas.php');
+
+//aqui se crea todo lo relaicionado con una pregunta oncluyendo las etiquetas 

@@ -17,3 +17,4 @@ if ($usuario) {
     exit;
 }
 
+//la persona inicia sesion en este lugar 

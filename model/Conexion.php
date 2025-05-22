@@ -4,8 +4,8 @@ class Conexion {
     private $host = 'localhost';
     private $db_name = 'questopia';
     private $username = 'root';
-    private $password = '199rafaelxz';
-    private $port = 3305;
+    private $password = 'mariaperez30';
+    private $port = 3306;
     private $charset = 'utf8mb4';
 
     private $pdo;

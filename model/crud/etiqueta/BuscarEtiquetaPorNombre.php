@@ -15,3 +15,5 @@ class BuscarEtiquetaPorNombre
         return $etiqueta;
     }
 }
+
+//se busca una pregunta por el nombre de la etiqueta 

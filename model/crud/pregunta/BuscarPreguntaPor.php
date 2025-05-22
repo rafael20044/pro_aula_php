@@ -24,3 +24,4 @@ class BuscarPreguntaPor
         return $resultado;
     }
 }
+

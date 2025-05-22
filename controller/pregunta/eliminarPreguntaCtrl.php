@@ -14,3 +14,5 @@ if ($seElimino) {
     $_SESSION['error'] = 'No se pudo eliminar la pregunta';
     header('location: ../../view/principal.php');
 }
+
+//elimina una pregunta por su id

@@ -19,3 +19,5 @@ if ($seCreo) {
     $_SESSION['error'] = 'Error al crear la respuesta';
     header("location: ../../view/pregunta.php?id=$id");
 }
+
+//aqui se crea la respuesta de una pregunta 

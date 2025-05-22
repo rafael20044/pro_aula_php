@@ -14,3 +14,5 @@ if ($seResolvio) {
     $_SESSION['error'] = 'No se pudo marcar como resulta';
     header('location: ../../view/principal.php');
 }
+
+//aqui se cambia el estado de las preguntas resuelto-no resuelto

@@ -22,3 +22,5 @@ if ($seCreo) {
     header('location: ../../view/singup.php');
     exit;
 }
+
+//aqui el usuario se suscribe si no esta suscrito a la plataforma 

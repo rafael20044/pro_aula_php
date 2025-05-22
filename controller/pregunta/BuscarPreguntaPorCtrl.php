@@ -14,3 +14,4 @@ class BuscarPreguntaPorCtrl
         return $datos;
     }
 }
+//busca todo lo relacionado con una pregunta 
